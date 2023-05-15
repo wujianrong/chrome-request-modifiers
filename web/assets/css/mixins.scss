@@ -1,0 +1,14 @@
+@mixin text-line($row: 1) {
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $row;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+}
+
+@mixin flexBase($justify: flex-start, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

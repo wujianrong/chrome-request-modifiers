@@ -1,0 +1,55 @@
+{
+  "name": "HTTP修改器",
+  "version": "1.0.1",
+  "description": "拦截浏览器发起的请求，可对请求返回的参数进行修改",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "16": "images/128.png",
+    "48": "images/128.png",
+    "128": "images/128.png"
+  },
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://www.baidu.com/*",
+        "*://github.com/*"
+      ],
+      "js": [
+        "./content/index.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/xhr.js",
+        "dist/build.js",
+        "views/message-call.js",
+        "views/index.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "./background/index.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts; script-src 'self' * blob: data:;"
+ },
+  "sandbox": {
+    "pages": ["views/index.html"]
+  }
+}

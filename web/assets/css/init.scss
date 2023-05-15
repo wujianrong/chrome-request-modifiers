@@ -1,0 +1,30 @@
+.jsoneditor {
+  border: 1px solid #8365f6;
+}
+.jsoneditor-menu {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: #8365f6;
+  border: none;
+}
+.jsoneditor-search {
+  position: relative;
+  top: 0;
+}
+.jsoneditor-frame {
+  display: flex;
+  align-items: center;
+}
+.jsoneditor-poweredBy {
+  display: none;
+}
+
+.status-close {
+  filter: grayscale(100%);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  filter:gray;
+}
+.events-close {
+  pointer-events: none;
+}
