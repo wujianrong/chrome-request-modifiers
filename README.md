@@ -1,5 +1,6 @@
 ## Example
-<img src="https://note.youdao.com/yws/public/resource/7843ab20c54065988c6521c101b9be9b/xmlnote/WEBRESOURCE05e2eddad1e3478517dd63dae30a391d/21829" width="700"> 
+
+![使用效果](https://s2.xptou.com/2023/05/15/6461974a12f66.png)
 
 
 ## 主要功能
